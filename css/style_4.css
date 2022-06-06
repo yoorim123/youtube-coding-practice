@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   /* 정중앙 정렬 */
+}
+.box span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #ee7625;
+  border-right: 2px solid #ee7625;
+  transform: rotate(45deg);  /* 완전 신박한 방법!!! */
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.box span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.box span:nth-child(3){
+  animation-delay: -0.4s;
+}
+/* 위의 방식으로 순서에 차등을 줘서 효과를 나타낼 수 있음!! */
+@keyframes animate{
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50%{
+    opacity: 1;
+  } 
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}

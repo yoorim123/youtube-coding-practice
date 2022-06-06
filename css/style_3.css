@@ -1,0 +1,33 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container{
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .box{
+  width: 580px;
+  height: 400px;
+  background: #000;
+  background-position: top;   /* background-position: x-position y-position | initial | inherit -> 배경이미지의 위치를 정하는 속성 */
+}
+.container .box.box1{
+background: url(../images/main_page.png);
+background-size: cover;
+transition: ease-in-out 10s;
+}
+.container .box.box2{
+  background: url(../images/sub_page.png);
+  background-size: cover;
+  transition: ease-in-out 4s;
+
+  }
+.container .box:hover{
+  background-position: bottom;
+}
